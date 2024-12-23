@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+.main-section {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8F8;
+    margin: 20px auto;
+}
+
+.advisors {
+    width: 32%;
+    padding: 20px;
+    position: absolute;
+    top: 6%;
+    left: 20%;
+}
+
+.advisor-box {
+    margin-bottom: 10px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.advisor-box.active[data-tab="beauty"] {
+    border-left: 10px solid #D75336;
+}
+
+.advisor-box.active[data-tab="health"] {
+    border-left: 10px solid #2B7939;
+}
+
+.advisor-box.active[data-tab="industrial"] {
+    border-left: 10px solid #78B13D;
+}
+
+.tab-button {
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s, border-color 0.3s;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #252525;
+}
+
+.tab-content {
+    display: none;
+    padding: 0;
+    border-top: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #252525;
+    font-weight: 400;
+}
+
+.btn {
+    color: #252525;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* .container {
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 10px;
+    overflow: hidden;
+} */
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.container.from-top {
+    transform: translateY(-50%);
+}
+
+.container.from-bottom {
+    transform: translateY(10%);
+}
+
+.container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
